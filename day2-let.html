@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>A1</li>
+    <li>A2</li>
+    <li>A3</li>
+    <li>A4</li>
+    <li>A5</li>
+</ul>
+<script>
+    var lis=document.getElementsByTagName("li");
+//    for(let i=0;i<lis.length;i++ ){
+//        lis[i].onclick=function(){
+//            alert(i)
+//        }
+//    }
+
+//    var br=a();
+//    br();
+    for(var i=0;i<lis.length;i++){
+        (function(i){
+            lis[i].onclick=function(){
+                alert(i);
+            }
+        })(i);
+    }
+
+</script>
+
+</body>
+</html>
